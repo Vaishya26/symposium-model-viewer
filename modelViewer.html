@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AR Model Viewer</title>
+    <!-- Include model-viewer via a CDN -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      /* Make the viewer take up the full viewport */
+      body, html {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      model-viewer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- model-viewer tag with AR support -->
+    <model-viewer
+      src="https://firebasestorage.googleapis.com/v0/b/arpitdemo26.appspot.com/o/models%2Fnacl.glb?alt=media&token=e9c35b22-90ae-40f4-9a24-af611922de52" 
+      alt="A 3D model in AR" 
+      ar 
+      ar-modes="scene-viewer quick-look" 
+      camera-controls 
+      auto-rotate>
+    </model-viewer>
+  </body>
+</html>
